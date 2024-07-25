@@ -1,9 +1,34 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Faculdade {
     private List<Cursos> cursos;
-    private List<Aluno> aluno;
-    private List<Professor> professor;
+    public ArrayList<Aluno> aluno;
+
+    public Faculdade(List<Cursos> cursos, ArrayList<Aluno> aluno) {
+        this.cursos = cursos;
+        this.aluno = aluno;
+    }
+
+    public void matricular(Aluno aluno) {
+        this.aluno.add(aluno);
+    }
+
+    public List<Aluno> getAluno() {
+        return aluno;
+    }
+
+    public void setAluno(ArrayList<Aluno> aluno) {
+        this.aluno = aluno;
+    }
+
+    public List<Cursos> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(List<Cursos> cursos) {
+        this.cursos = cursos;
+    }
 }
