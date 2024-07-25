@@ -1,12 +1,12 @@
 package models;
 
-import enuns.Curso;
+import enuns.Materias;
 
 public class Aluno {
     private String nome;
     private String matricula;
     private String cpf;
-    private Curso curso;
+    private Materias materias;
 
     public String getNome() {
         return nome;
@@ -32,25 +32,25 @@ public class Aluno {
         this.cpf = cpf;
     }
 
-    public Curso getCurso() {
-        return curso;
+    public Materias getCurso() {
+        return materias;
     }
 
-    public void setCurso(Curso curso) {
-        this.curso = curso;
+    public void setCurso(Materias materias) {
+        this.materias = materias;
     }
 
-    public Aluno(String nome, String matricula, String cpf, Curso curso) {
+    public Aluno(String nome, String matricula, String cpf, Materias materias) {
         this.nome = nome;
         this.matricula = matricula;
         this.cpf = cpf;
-        this.curso = curso;
+        this.materias = materias;
     }
 
-    public void criarAluno(String nome, String matricula, String cpf, Curso curso) {
+    public void criarAluno(String nome, String matricula, String cpf, Materias materias) {
         this.nome = nome;
         this.matricula = matricula;
         this.cpf = cpf;
-        this.curso = curso;
+        this.materias = materias;
     }
 }

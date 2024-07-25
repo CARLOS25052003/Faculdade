@@ -1,5 +1,5 @@
 package enuns;
 
-public enum Curso {
+public enum Materias {
         ADMINISTRAÇÃO , MEDICINA , INFORMATICA , DIREITO , PSICOLOGIA
 }

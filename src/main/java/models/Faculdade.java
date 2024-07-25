@@ -1,5 +1,7 @@
 package models;
 
+import enuns.Materias;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +16,16 @@ public class Faculdade {
 
     public void matricular(Aluno aluno) {
         this.aluno.add(aluno);
+    }
+
+    public void desmatricular(Aluno aluno) {
+        this.aluno.remove(aluno);
+    }
+
+    public void trocarCurso(Aluno aluno, Cursos cursos) {
+        aluno.setCurso(cursos.materias);
+        cursos.getAlunos().add(aluno);
+
     }
 
     public List<Aluno> getAluno() {
