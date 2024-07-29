@@ -1,6 +1,4 @@
-package models;
-
-import enuns.Materias;
+package com.faculdade.demo.models;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,10 +1,11 @@
-package models;
+package com.faculdade.demo.models;
 
-import enuns.Materias;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import com.faculdade.demo.enuns.Materias;
+import lombok.*;
+
+import java.util.UUID;
+
+import static java.lang.Integer.parseInt;
 
 @Getter
 @ToString
@@ -18,9 +19,7 @@ public class Aluno {
     private String matricula;
     @Setter
     @Getter
-    private String cpf;
-    @Setter
-    @Getter
+    @Generated
     private Materias materias;
 
 
@@ -32,10 +31,14 @@ public class Aluno {
         this.materias = materias;
     }
 
-    public void criarAluno(String nome, String matricula, String cpf, Materias materias) {
+    public void criarAluno(String nome, String matricula, Materias materias) {
         this.nome = nome;
-        this.matricula = matricula;
-        this.cpf = cpf;
+        this.matricula = gerarID();
         this.materias = materias;
+    }
+
+    public String gerarID() {
+        UUID uuid = UUID.randomUUID();
+        return uuid.toString().substring(0,6);
     }
 }
